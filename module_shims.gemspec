@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ypxing@gmail.com"]
 
   spec.summary       = %q{Insert shims among inheritance chain for debugging/development and reading source code purpose.}
-  spec.description   = %q{It helps you prepend modules in the inheritance chain so that you can easily implement your own methods to override existing ones in specific modules/classes without impacting others.}
+  spec.description   = %q{The gem is one tool used for debugging/developing and as one helper for reading/trying source code of projects (like Ruby on Rails). It helps you prepend modules in the inheritance chain so that you can easily implement your own methods to override existing ones in specific modules/classes without impacting others. Different from monkey patch, you can easily enable/dsiable your implementation.}
   spec.homepage      = "https://github.com/ypxing/module_shims"
   spec.license       = "MIT"
 
