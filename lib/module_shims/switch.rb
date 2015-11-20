@@ -20,8 +20,17 @@ module ModuleShims
     end
 
     def shim_const
-      @shim ||= const_defined?('SHIM') ? const_get('SHIM') :
-        const_set('SHIM', Module.new{ def self.prepended(mod); mod.remove_instance_methods_from_ancestors(name); super; end })
+      return const_get('SHIM') if const_defined?('SHIM')
+
+      # use predefined_method to look up SHIM module. It's to support "reload!" in rails console
+      predefined_method = "#{self.name.downcase.gsub(/::/, '_')}_shim"
+      existing_shim = target_const.ancestors.find { |anc| anc.respond_to? predefined_method }
+
+      unless existing_shim
+        existing_shim = Module.new
+        existing_shim.singleton_class.send(:define_method, predefined_method) {}
+      end
+      const_set('SHIM', existing_shim)
     end
 
     def target_const
