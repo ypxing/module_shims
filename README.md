@@ -1,7 +1,7 @@
 # Module::Shims
 
-The gem is one tool used for debugging/developing and as one helper for reading/trying source code of projects (like Ruby on Rails).
-It should NOT be used for production.
+The gem is developed as a tool for debugging/developing and as one helper for reading/trying source code of projects (like Ruby on Rails).
+It supports to append shim to both class and module (see below note for module).
 
 In one inheritance chain like [A, B, C, D], it can add shim module to anyone of them so that you can "replace" one method's implementation of one specific module/class with your own implementation without impacting other modules/classes.
 
