@@ -83,7 +83,7 @@ You can keep BClass's method implementation in the inheritance chain like
 
 ```
 
-## Note for adding shim to one module.
+## Note for adding shim to one module
 
 For existing module M, below code cannot impact existing classes which have already included M.
 ```ruby
@@ -115,7 +115,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/module_shims.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ypxing/module_shims.
 
 
 ## License
